@@ -1,7 +1,44 @@
 # Set Matrix Zeroes
+## https://leetcode.com/problems/set-matrix-zeroes
 
+Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in-place.
+```
+Example 1:
 
-## Implementation :
+Input: 
+[
+  [1,1,1],
+  [1,0,1],
+  [1,1,1]
+]
+Output: 
+[
+  [1,0,1],
+  [0,0,0],
+  [1,0,1]
+]
+
+Example 2:
+
+Input: 
+[
+  [0,1,2,0],
+  [3,4,5,2],
+  [1,3,1,5]
+]
+Output: 
+[
+  [0,0,0,0],
+  [0,4,5,0],
+  [0,3,1,0]
+]
+```
+**Follow up:**
+1. A straight forward solution using O(mn) space is probably a bad idea.
+2. A simple improvement uses O(m + n) space, but still not the best solution.
+3. Could you devise a constant space solution?
+
+## Implementation 1 : Time => O(rows*cols) , Space => (rows+cols)
 ```java
 class Solution {
     public void setZeroes(int[][] matrix) {
@@ -30,3 +67,6 @@ class Solution {
     }
 }
 ```
+
+# References :
+1. https://leetcode.com/articles/set-matrix-zeroes/
